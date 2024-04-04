@@ -30,65 +30,67 @@ const MainPage = ({ className, onShowModal }: MainPageProps) => {
 
   return (
     <div className={cls([styles.MainPage, className])}>
-      <div className={styles.banner}>
-        <div className={styles.title}>
-          <Text size={'xxl'} title={'Создаю условия для вашего успеха'} />
-        </div>
-        <div className={styles.subtitle}>
-          <Text
-            size={'s'}
-            text={
-              width > breakpoint.xxs
-                ? 'Когда ваше время и энергия лучше сфокусированы, \n ' +
-                  'стремление к новым возможностям становится реальностью,  ' +
-                  'ваш успех зависит от ваших действий'
-                : 'Ваш успех зависит от ваших действий'
-            }
-          />
-        </div>
-        <div className={styles.main_action}>
-          <Button
-            addonRight={
-              breakpoint.xxs !== width ? (
-                <VectorIcon className={styles.vector} />
-              ) : (
-                <BVectorIcon className={styles.vector} />
-              )
-            }
-            color={'primary'}
-          >
+      <div className={styles.main}>
+        <div className={styles.banner}>
+          <div className={styles.title}>
+            <Text size={'xxl'} title={'Создаю условия для вашего успеха'} />
+          </div>
+          <div className={styles.subtitle}>
             <Text
-              bold
-              className={styles.button_text}
-              text={width > breakpoint.sm ? 'Записаться на консультацию' : 'Записаться'}
+              size={'s'}
+              text={
+                width > breakpoint.tp
+                  ? 'Когда ваше время и энергия лучше сфокусированы, \n ' +
+                    'стремление к новым возможностям становится реальностью,  ' +
+                    'ваш успех зависит от ваших действий'
+                  : 'Ваш успех зависит от ваших действий'
+              }
             />
-          </Button>
-          <Button
-            addonRight={
-              breakpoint.xxs !== width ? (
-                <VectorIcon className={styles.vector} />
-              ) : (
-                <BVectorIcon className={styles.vector} />
-              )
-            }
-            color={'transparent'}
-            onClick={onShowModal}
-          >
-            <Text
-              bold
-              className={styles.button_text}
-              text={width > breakpoint.sm ? 'Бесплатная консультация' : 'Заказать звонок'}
-            />
-          </Button>
+          </div>
+          <div className={styles.main_action}>
+            <Button
+              addonRight={
+                breakpoint.mpm !== width ? (
+                  <VectorIcon className={styles.vector} />
+                ) : (
+                  <BVectorIcon className={styles.vector} />
+                )
+              }
+              color={'primary'}
+            >
+              <Text
+                bold
+                className={styles.button_text}
+                text={width > breakpoint.tls ? 'Записаться на консультацию' : 'Записаться'}
+              />
+            </Button>
+            <Button
+              addonRight={
+                breakpoint.mpm !== width ? (
+                  <VectorIcon className={styles.vector} />
+                ) : (
+                  <BVectorIcon className={styles.vector} />
+                )
+              }
+              color={'transparent'}
+              onClick={onShowModal}
+            >
+              <Text
+                bold
+                className={styles.button_text}
+                text={width > breakpoint.tls ? 'Бесплатная консультация' : 'Заказать звонок'}
+              />
+            </Button>
+          </div>
         </div>
 
-        <div className={styles.wrapper_info}>
+        <div className={styles.wrapper_result}>
           <div className={styles.wrapper_quantity}>
             <Text bold font={'montserrat'} size={'xl'} text={`${sum}+`} />
             <Text
               className={styles.description}
               size={'s'}
-              text={width > breakpoint.xxs ? 'техник для достижения целей' : 'техники'}
+              text={width > breakpoint.tp ? 'техник для достижения целей' : 'техники'}
             />
           </div>
 
@@ -97,7 +99,7 @@ const MainPage = ({ className, onShowModal }: MainPageProps) => {
             <Text
               className={styles.description}
               size={'s'}
-              text={width > breakpoint.xxs ? 'увеличение личной продуктивности' : 'продуктивности'}
+              text={width > breakpoint.tp ? 'увеличение личной продуктивности' : 'продуктивности'}
             />
           </div>
         </div>

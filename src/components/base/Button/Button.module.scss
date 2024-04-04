@@ -3,53 +3,44 @@
 
 .Button {
   cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   font-size: $font-size-m;
   line-height: $font-line-m;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 0 0 21px;
-  @include breakpoint-max($smBreakpoint) {
-    padding: 0 0 0 16px;
-  }
-  @include breakpoint-max($xsBreakpoint) {
-    padding: 0 0 0 8px;
+  @include breakpoint-max($mpmiBreakpoint) {
+    padding: 0 0 0 10px;
   }
 }
 
 .addonLeft,
 .addonRight {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0 13px 13px 39px;
   @include flex-end-justify-center;
   height: 100%;
-  @include breakpoint-max($xxsBreakpoint) {
-    padding: 0 6px 6px 14px;
-  }
-  @include breakpoint-max($xsBreakpoint) {
-    padding: 0 8px 8px 35px;
 
+  @include breakpoint-max($mpmiBreakpoint) {
+    padding: 0 8px 8px 20px;
+    margin-left: auto;
   }
-  @include breakpoint-max($xxsBreakpoint) {
-    padding: 0 6px 6px 14px;
+  @include breakpoint-max($mpmBreakpoint) {
+    padding: 0 8px 8px 14px;
   }
 
-}
-
-
-.disabled {
-  &:disabled {
-    background: var(--background-disabled);
-    color: var(--color-text-disabled);
-    cursor: not-allowed;
-
-    &:hover {
-      background: var(--background-disabled);
-      color: var(--color-text-disabled);
-    }
-  }
 }
 
 .primary {
@@ -71,7 +62,7 @@
   &:hover {
     background-color: transparent;
     color: $color-white;
-    //border: 1px solid $color-white;
+    -webkit-box-shadow: 0 0 0 2px $color-white inset;
     box-shadow: 0 0 0 2px $color-white inset;
 
     .addonRight {
@@ -88,19 +79,20 @@
   }
 
   &:active {
-    //border: 1px solid $color-grey;
-    box-shadow: 0 0 0 2px $color-grey inset;
-    color: $color-grey;
+    -webkit-box-shadow: 0 0 0 2px $color-blue-150 inset;
+    box-shadow: 0 0 0 2px $color-blue-150 inset;
+    color: $color-blue-150;
 
     svg {
-      stroke: $color-grey;
+      stroke: $color-blue-150;
+
       path {
-        stroke: $color-grey;
+        stroke: $color-blue-150;
       }
     }
 
     .addonRight {
-      border-left: 2px solid $color-grey;
+      border-left: 2px solid $color-blue-150;
 
     }
   }
@@ -111,7 +103,7 @@
 .transparent {
   background-color: transparent;
   color: $color-white;
-  //border: 1px solid $color-white;
+  -webkit-box-shadow: 0 0 0 2px $color-white inset;
   box-shadow: 0 0 0 2px $color-white inset;
 
   svg {
@@ -141,8 +133,8 @@
   }
 
   &:active {
-    //border: 1px solid $color-grey;
     color: $color-blue-150;
+    -webkit-box-shadow: 0 0 0 2px $color-blue-150 inset;
     box-shadow: 0 0 0 2px $color-blue-150 inset;
 
     svg {
@@ -159,6 +151,5 @@
   }
 
 }
-
 
 

@@ -78,3 +78,8 @@
   }
 }
 
+@mixin media-width-height($min-width, $max-width, $min-height, $max-height) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) and (min-height: $min-height) and (max-height: $max-height) {
+    @content;
+  }
+}

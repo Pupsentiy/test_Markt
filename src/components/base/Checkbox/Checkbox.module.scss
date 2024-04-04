@@ -18,12 +18,14 @@
   min-width: 30px;
   min-height: 30px;
   border: 1px solid $color-white;
+  -webkit-transition: background-color .2s;
+  -o-transition: background-color .2s;
   transition: background-color .2s;
-  @include breakpoint-max($xsBreakpoint) {
+  @include breakpoint-max($mlsBreakpoint) {
     min-width: 20px;
     min-height: 20px;
   }
-  @include breakpoint-max($xxsBreakpoint) {
+  @include breakpoint-max($mpmBreakpoint) {
     min-width: 15px;
     min-height: 15px;
   }
@@ -39,10 +41,11 @@
   @include align-center;
   gap: 8px;
   cursor: pointer;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
 }
 
 .radio {
   border-radius: 50%;
 }
-

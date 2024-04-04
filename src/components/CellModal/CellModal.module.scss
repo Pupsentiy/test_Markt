@@ -10,9 +10,22 @@
   overflow: auto;
   @include column;
   gap: 37px;
-  @include breakpoint-max($smBreakpoint) {
-    padding: 24px 24px 24px 34px !important;
+  @include breakpoint-max($tlsBreakpoint) {
+    padding: 60px 60px 60px 90px !important;
     max-width: 100vw !important;
+    width: 100%;
+  }
+  @include breakpoint-max($mlsBreakpoint) {
+    padding: 40px 40px 40px 75px !important;
+  }
+  @include breakpoint-max($mpmiBreakpoint) {
+    padding: 30px 30px 30px 40px !important;
+  }
+  @include breakpoint-max($mpiBreakpoint) {
+    padding: 20px 20px 20px 30px !important;
+  }
+  @include breakpoint-max($mpmBreakpoint) {
+    padding: 24px 26px 12px 32px !important;
   }
 
 
@@ -21,6 +34,10 @@
     stroke: $color-white;
 
     .close {
+      @include breakpoint-max($mpmBreakpoint) {
+        width: 30px;
+        height: 30px;
+      }
       &:hover {
         svg {
           stroke: $color-blue-150;
@@ -33,12 +50,6 @@
   .title {
     margin-left: 15px;
 
-    @include breakpoint-max($smBreakpoint) {
-      margin-left: 0;
-    }
-    @include breakpoint-max($xxsBreakpoint) {
-      width: 80%;
-    }
   }
 
   .form {
@@ -46,28 +57,15 @@
     padding-right: 17px;
     gap: 66px;
     @include column;
-    @include breakpoint-max($xsBreakpoint) {
-      margin-top: 49px;
-      padding-right: 8px;
-      gap: 49px;
-    }
 
-    .input_num {
-      //margin-top: 65px;
-      @include breakpoint-max($xsBreakpoint) {
-        //margin-top: 44px;
-      }
-    }
+
 
     .wrapper_checkbox {
       gap: 56px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      @include breakpoint-max($xsBreakpoint) {
-        margin-top: 35px;
-      }
-      @include breakpoint-max($xxsBreakpoint) {
-        margin-top: 0;
-      }
+
       .check_label {
         margin-left: 20px;
       }
@@ -79,15 +77,40 @@
       height: 71px;
       max-width: 380px;
       width: 100%;
-      @include breakpoint-max($xsBreakpoint) {
-        width: 100%;
-        margin-top: 35px;
+
+      .vector {
+        @include breakpoint-max($tlsBreakpoint) {
+          width: 15px;
+          height: 15px;
+        }
+        @include breakpoint-max($mpmBreakpoint) {
+          margin-left: 8px;
+        }
       }
-      @include breakpoint-max($xxsBreakpoint) {
-        height: 46.91px;
-        margin-top: 55px;
+
+      @include breakpoint-max($mpmBreakpoint) {
+        p {
+          font-size: $font-size-xs;
+          line-height: $font-line-xs;
+        }
       }
     }
+  }
+
+  .wrapper_success{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 90px;
+    height: 100%;
+    margin-top: 128px;
   }
 
 }

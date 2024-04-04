@@ -39,33 +39,30 @@
   .title {
     font-size: $font-size-3xl;
     line-height: $font-line-3xl;
-    @include breakpoint-max($mdBreakpoint) {
+    @include breakpoint-max($lgBreakpoint) {
       font-size: $font-size-xxl;
       line-height: $font-line-xxl;
     }
-    @include breakpoint-max($smBreakpoint) {
-      font-size: $font-size-xl-a;
-      line-height: $font-line-xl-a;
+    @include breakpoint-max($mlsBreakpoint) {
+      font-size: $font-size-l;
+      line-height: $font-line-l;
     }
-    @include breakpoint-max($xxsBreakpoint) {
-      font-size: $font-size-xl-a;
-      line-height: $font-line-xl-a;
-    }
+
 
   }
 
   .text {
     font-size: $font-size-xxl;
     line-height: $font-size-xxl;
-    @include breakpoint-max($smBreakpoint) {
+    @include breakpoint-max($tpBreakpoint) {
       font-size: $font-size-xl;
       line-height: $font-line-xl;
     }
-    @include breakpoint-max($xsBreakpoint) {
+    @include breakpoint-max($mlsBreakpoint) {
       font-size: $font-size-l;
       line-height: $font-line-l;
     }
-    @include breakpoint-max($xxsBreakpoint) {
+    @include breakpoint-max($mpmBreakpoint) {
       font-size: $font-size-m;
       line-height: $font-line-m;
     }
@@ -76,15 +73,15 @@
   .title {
     font-size: $font-size-xxl;
     line-height: $font-size-xxl;
-    @include breakpoint-max($smBreakpoint) {
+    @include breakpoint-max($tpBreakpoint) {
       font-size: $font-size-xl;
       line-height: $font-line-xl;
     }
-    @include breakpoint-max($xsBreakpoint) {
+    @include breakpoint-max($mlsBreakpoint) {
       font-size: $font-size-l;
       line-height: $font-line-l;
     }
-    @include breakpoint-max($xxsBreakpoint) {
+    @include breakpoint-max($mpmBreakpoint) {
       font-size: $font-size-m;
       line-height: $font-line-m;
     }
@@ -94,11 +91,11 @@
     font-size: $font-size-xl;
     line-height: $font-line-xl;
 
-    @include breakpoint-max($xsBreakpoint) {
+    @include breakpoint-max($mlsBreakpoint) {
       font-size: $font-size-l;
       line-height: $font-line-l;
     }
-    @include breakpoint-max($xxsBreakpoint) {
+    @include breakpoint-max($mpmBreakpoint) {
       font-size: $font-size-m;
       line-height: $font-line-m;
     }
@@ -110,11 +107,11 @@
     font-size: $font-size-xl;
     line-height: $font-line-xl;
 
-    @include breakpoint-max($xsBreakpoint) {
+    @include breakpoint-max($mlsBreakpoint) {
       font-size: $font-size-l;
       line-height: $font-line-l;
     }
-    @include breakpoint-max($xxsBreakpoint) {
+    @include breakpoint-max($mpmBreakpoint) {
       font-size: $font-size-m;
       line-height: $font-line-m;
     }
@@ -124,11 +121,11 @@
     font-size: $font-size-l;
     line-height: $font-line-l;
 
-    @include breakpoint-max($xsBreakpoint) {
+    @include breakpoint-max($mlsBreakpoint) {
       font-size: $font-size-m;
       line-height: $font-line-m;
     }
-    @include breakpoint-max($xxsBreakpoint) {
+    @include breakpoint-max($mpmBreakpoint) {
       font-size: $font-size-s;
       line-height: $font-line-s;
     }
@@ -140,11 +137,11 @@
     font-size: $font-size-l;
     line-height: $font-line-l;
 
-    @include breakpoint-max($xsBreakpoint) {
+    @include breakpoint-max($mlsBreakpoint) {
       font-size: $font-size-m;
       line-height: $font-line-m;
     }
-    @include breakpoint-max($xxsBreakpoint) {
+    @include breakpoint-max($mpmBreakpoint) {
       font-size: $font-size-s;
       line-height: $font-line-s;
     }
@@ -154,15 +151,15 @@
     font-size: $font-size-m;
     line-height: $font-line-m;
 
-    @include breakpoint-max($smBreakpoint) {
+    @include breakpoint-max($mlsBreakpoint) {
       font-size: $font-size-s;
       line-height: $font-line-s;
     }
-    @include breakpoint-max($xsBreakpoint) {
-      font-size: $font-size-xs;
-      line-height: $font-line-xs;
+    @include breakpoint-max($mpiBreakpoint) {
+      font-size: $font-size-xxs;
+      line-height: $font-line-xxs;
     }
-    @include breakpoint-max($xxsBreakpoint) {
+    @include breakpoint-max($mpmBreakpoint) {
       font-size: $font-size-3xs;
       line-height: $font-line-3xs;
     }
@@ -174,15 +171,15 @@
     font-size: $font-size-m;
     line-height: $font-line-m;
 
-    @include breakpoint-max($smBreakpoint) {
+    @include breakpoint-max($tlsBreakpoint) {
       font-size: $font-size-s;
       line-height: $font-line-s;
     }
-    @include breakpoint-max($xsBreakpoint) {
+    @include breakpoint-max($mlsBreakpoint) {
       font-size: $font-size-xs;
       line-height: $font-line-xs;
     }
-    @include breakpoint-max($xxsBreakpoint) {
+    @include breakpoint-max($mpmBreakpoint) {
       font-size: $font-size-3xs;
       line-height: $font-line-3xs;
     }
@@ -192,15 +189,15 @@
     font-size: $font-size-s;
     line-height: $font-line-s;
 
-    @include breakpoint-max($smBreakpoint) {
+    @include breakpoint-max($tlsBreakpoint) {
       font-size: $font-size-xs;
       line-height: $font-line-xs;
     }
-    @include breakpoint-max($xsBreakpoint) {
+    @include breakpoint-max($mlsBreakpoint) {
       font-size: $font-size-xxs;
       line-height: $font-line-xxs;
     }
-    @include breakpoint-max($xxsBreakpoint) {
+    @include breakpoint-max($mpmBreakpoint) {
       font-size: $font-size-3xs;
       line-height: $font-line-3xs;
     }

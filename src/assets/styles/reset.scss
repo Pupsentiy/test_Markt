@@ -45,7 +45,6 @@ svg,
 video {
   display: inline-block;
   vertical-align: top;
-  max-width: 100%;
   height: auto;
   -o-object-fit: cover;
   object-fit: cover;
@@ -81,12 +80,23 @@ legend {
 }
 
 button, input {
-  transition-property: background-color, border-color, box-shadow;
+  -webkit-transition-property: background-color, border-color, -webkit-box-shadow;
+  -o-transition-property: background-color, border-color, box-shadow;
+  transition-property: background-color, border-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 85ms;
+  -o-transition-duration: 85ms;
   transition-duration: 85ms;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }

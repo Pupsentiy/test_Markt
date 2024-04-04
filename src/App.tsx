@@ -6,8 +6,12 @@ import { Suspense, useCallback, useState } from 'react';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  const onShowModal = useCallback(() => setShowModal(true), []);
+  const onShowModal = useCallback(() => {
+    setShowModal(true);
+    setShowSuccess(false);
+  }, []);
   const onCloseModal = useCallback(() => setShowModal(false), []);
   return (
     <main>
@@ -20,7 +24,13 @@ function App() {
         <Suspense fallback={<PageLoader />}>
           <Header />
           <MainPage onShowModal={onShowModal} />
-          <CellModal onCloseModal={onCloseModal} onShowModal={onShowModal} showModal={showModal} />
+          <CellModal
+            onCloseModal={onCloseModal}
+            onShowModal={onShowModal}
+            setShowSuccess={setShowSuccess}
+            showModal={showModal}
+            showSuccess={showSuccess}
+          />
         </Suspense>
       </div>
     </main>

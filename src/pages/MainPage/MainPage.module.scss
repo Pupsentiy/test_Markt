@@ -4,123 +4,207 @@
 .MainPage {
   z-index: 20;
   position: relative;
-  @include align-center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 81px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 
-  .banner {
-    width: 60.6%;
-    @include column;
-    gap: 25px;
-    @include breakpoint-max($xlBreakpoint) {
-      width: 55%;
-    }
-    @include breakpoint-max($xxsBreakpoint) {
-      width: 100%;
-    }
+  .main {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    gap: 115px;
 
-    .title {
-      text-transform: uppercase;
-      max-width: 747px;
+    @include breakpoint-max($mpmBreakpoint) {
+      width: 83%;
     }
-
-    .subtitle {
-      border-left: 1px solid $color-white;
-      padding-left: 24px;
-      margin-top: 53px;
-      color: $color-white-50;
-      @include breakpoint-max($mdBreakpoint) {
-        margin-top: 35px;
-      }
-      @include breakpoint-max($xxsBreakpoint) {
-        padding-left: 6px;
-        max-width: 60%;
-      }
+    @include breakpoint-max($mpmBreakpoint) {
+      gap: 200px;
     }
 
-    .main_action {
-      display: flex;
-      margin-top: 65px;
-      gap: 42px;
-      //@include breakpoint-max($mdBreakpoint) {
-      //  @include column;
-      //  margin-top: 50px;
-      //  gap: 16px;
-      //}
-      @include breakpoint-max($lgBreakpoint) {
-        @include column;
-        margin-top: 50px;
-        gap: 16px;
-      }
-
-      button {
-        max-width: 380px;
-        height: 71px;
-        width: 100%;
-
-
-        .vector {
-          @include breakpoint-max($xsBreakpoint) {
-            width: 15px;
-            height: 15px;
-          }
-          @include breakpoint-max($xxsBreakpoint) {
-            width: 8px;
-            height: 8px;
-          }
-        }
-
+    .banner {
+      .title {
+        text-transform: uppercase;
+        width: 80%;
         @include breakpoint-max($lgBreakpoint) {
-          max-width: 396px;
+          width: 90%;
         }
-        @include breakpoint-max($smBreakpoint) {
-          max-width: 316px;
-          .button_text {
-            margin: 0 auto;
-          }
+        @include breakpoint-max($mpmiBreakpoint) {
+          width: 100%;
         }
-        @include breakpoint-max($xsBreakpoint) {
-          max-width: 240px;
-          height: 55px;
-        }
-
-        @include breakpoint-max($xxsBreakpoint) {
-          height: 30.28px;
-          max-width: 126px;
+        @include breakpoint-max($mpsBreakpoint) {
+          width: 110%;
         }
       }
 
+      .subtitle {
+        border-left: 1px solid $color-white;
+        padding-left: 24px;
+        margin-top: 53px;
+        color: $color-white-50;
+        width: 75%;
+        @include breakpoint-max($lgBreakpoint) {
+          width: 70%;
+        }
+        @include breakpoint-max($mlsBreakpoint) {
+          padding-left: 10px;
+        }
+        @include breakpoint-max($mpsBreakpoint) {
+          width: 85%;
+        }
+        @include breakpoint-max($mpmBreakpoint) {
+          width: 80%;
+        }
+      }
+
+      .main_action {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 65px;
+        gap: 40px;
+        @include media-width-height($tpBreakpoint, $tlsBreakpoint, $tpBreakpoint, $tlsBreakpoint) {
+          @include column;
+        }
+        @include media-width-height($tpBreakpoint, $lgBreakpoint, $tpBreakpoint, $lgBreakpoint) {
+          @include column;
+        }
+        @include breakpoint-max($tpBreakpoint) {
+          @include column;
+        }
+        @include breakpoint-max($mpmiBreakpoint) {
+          gap: 30px;
+        }
+        @include breakpoint-max($mpmBreakpoint) {
+          gap: 20px;
+        }
+
+        button {
+          max-width: 380px;
+          height: 71px;
+          width: 100%;
+          @include breakpoint-max($lgBreakpoint) {
+            max-width: 340px;
+          }
+          @include breakpoint-max($tlsBreakpoint) {
+            max-width: 280px;
+          }
+          @include media-width-height($tpBreakpoint, $tlsBreakpoint, $tpBreakpoint, $tlsBreakpoint) {
+            max-width: 314px;
+          }
+          @include media-width-height(810px, $lgBreakpoint, $tpBreakpoint, $lgBreakpoint) {
+            max-width: 337px;
+          }
+          @include breakpoint-max($mlsBreakpoint) {
+            max-width: 248px;
+            height: 55px;
+          }
+          @include breakpoint-max($mpmiBreakpoint) {
+            height: 45px;
+            max-width: 172px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+          }
+          @include breakpoint-max($mpiBreakpoint) {
+            max-width: 160px;
+          }
+          @include breakpoint-max($mpsBreakpoint) {
+            max-width: 154px;
+          }
+          @include breakpoint-max($mpmBreakpoint) {
+            max-width: 128px;
+            height: 30px;
+          }
+
+          .vector {
+            @include breakpoint-max($tlsBreakpoint) {
+              width: 15px;
+              height: 15px;
+            }
+            @include breakpoint-max($mpmBreakpoint) {
+              width: 8px;
+              height: 8px;
+            }
+          }
+
+
+        }
+
+
+      }
     }
 
-    .wrapper_info {
+    .wrapper_result {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      margin-top: 112px;
       height: 132px;
       gap: 230px;
-
+      margin-bottom: 45px;
       @include breakpoint-max($lgBreakpoint) {
-        //margin-top: 45px;
         gap: 190px;
       }
-      @include breakpoint-max($mdBreakpoint) {
+      @include breakpoint-max($tlsBreakpoint) {
         gap: 130px;
       }
-      @include breakpoint-max($smBreakpoint) {
-        gap: 85px;
+      @include media-width-height($tpBreakpoint, $tlsBreakpoint, $tpBreakpoint, $tlsBreakpoint) {
+        gap: 56px;
+      }
+      @include media-width-height($tpBreakpoint, $lgBreakpoint, $tpBreakpoint, $lgBreakpoint) {
+        gap: 56px;
+      }
+      @include breakpoint-max($tpBreakpoint) {
         height: auto;
       }
-      @include breakpoint-max($xxsBreakpoint) {
-        gap: 0;
-        width: 192px
+      @include breakpoint-max($mlsBreakpoint) {
+        gap: 122px;
+      }
+      @include breakpoint-max($mpmiBreakpoint) {
+        gap: 71px;
+      }
+      @include breakpoint-max($mpiBreakpoint) {
+        gap: 58px;
+      }
+      @include breakpoint-max($mpsBreakpoint) {
+        gap: 53px;
+      }
+      @include breakpoint-max($mpmBreakpoint) {
+        gap: 46px;
       }
 
       .wrapper_quantity, .wrapper_percent {
         width: 190px;
         border-left: 1px solid $color-white;
         @include column-between;
-
-        @include breakpoint-max($smBreakpoint) {
+        @include breakpoint-max($tpBreakpoint) {
           @include column-justify-center;
+        }
+        @include breakpoint-max($tpBreakpoint) {
+          width: auto;
+        }
+        @include breakpoint-max($mlsBreakpoint) {
+          padding: 0 0 0 10px;
         }
 
         .description {
@@ -130,54 +214,65 @@
 
       .wrapper_quantity {
         padding: 0 0 0 24px;
-        @include breakpoint-max($xxsBreakpoint) {
-          padding: 0 0 0 8px;
+        @include breakpoint-max($mlsBreakpoint) {
+          padding: 0 0 0 10px;
         }
       }
 
       .wrapper_percent {
         padding: 0 0 0 30px;
-        @include breakpoint-max($xxsBreakpoint) {
-          padding: 0 0 0 8px;
+        @include breakpoint-max($mlsBreakpoint) {
+          padding: 0 0 0 10px;
         }
       }
     }
+
   }
 
   .mentor {
     position: absolute;
     right: -90px;
-    bottom: 80px;
+    bottom: 0;
     z-index: -1;
-
-    img {
-      width: 525px;
-      height: 800px;
-    }
-
-    @include breakpoint-max($mdBreakpoint) {
+    width: auto;
+    max-width: 100%;
+    @include breakpoint-max($mlsBreakpoint) {
       right: -150px;
     }
-    @include breakpoint-max($smBreakpoint) {
-      img {
-        width: 100%;
-        height: 740px;
-      }
+    @include breakpoint-max($mpmiBreakpoint) {
+      right: -135px;
     }
-    @include breakpoint-max($xsBreakpoint) {
-      img {
-        width: 100%;
-        height: 612px;
-      }
+    @include breakpoint-max($mpiBreakpoint) {
+      right: -108px;
     }
-    @include breakpoint-max($xxsBreakpoint) {
-      right: -145px;
-      img {
-        height: 535px
-      }
+    @include breakpoint-max($mpmBreakpoint) {
+      right: -70px;
     }
 
-
+    img {
+      @include breakpoint-max($lgBreakpoint) {
+        height: 785px;
+      }
+      @include breakpoint-max($tlsBreakpoint) {
+        height: 720px;
+      }
+      @include media-width-height($tpBreakpoint, $tlsBreakpoint, $tpBreakpoint, $tlsBreakpoint) {
+        height: auto;
+      }
+      @include media-width-height($tpBreakpoint, $lgBreakpoint, $tpBreakpoint, $lgBreakpoint) {
+        height: auto;
+      }
+      @include breakpoint-max($mlsBreakpoint) {
+        height: 635px;
+      }
+      @include breakpoint-max($mpiBreakpoint) {
+        height: 596px;
+        width: 370px;
+      }
+      @include breakpoint-max($mpmBreakpoint) {
+        height: 580px;
+      }
+    }
   }
 
 }

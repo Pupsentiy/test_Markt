@@ -4,6 +4,10 @@
 .Input {
   input {
     width: 100%;
+    -webkit-transition: background-color 0.2s ease-in-out 0s,
+    border-color 0.2s ease-in-out 0s;
+    -o-transition: background-color 0.2s ease-in-out 0s,
+    border-color 0.2s ease-in-out 0s;
     transition: background-color 0.2s ease-in-out 0s,
     border-color 0.2s ease-in-out 0s;
     overflow-wrap: break-word;
@@ -28,11 +32,39 @@
   background: transparent;
   padding-bottom: 12px;
 
+  ::-webkit-input-placeholder {
+    color: $color-white-50;
+  }
+
+  ::-moz-placeholder {
+    color: $color-white-50;
+  }
+
+  :-ms-input-placeholder {
+    color: $color-white-50;
+  }
+
+  ::-ms-input-placeholder {
+    color: $color-white-50;
+  }
+
   ::placeholder {
     color: $color-white-50;
   }
 
   &:focus {
+    &::-webkit-input-placeholder {
+      color: $color-white;
+    }
+    &::-moz-placeholder {
+      color: $color-white;
+    }
+    &:-ms-input-placeholder {
+      color: $color-white;
+    }
+    &::-ms-input-placeholder {
+      color: $color-white;
+    }
     &::placeholder {
       color: $color-white;
     }
@@ -42,5 +74,3 @@
     border-bottom: 1px solid $color-white;
   }
 }
-
-
