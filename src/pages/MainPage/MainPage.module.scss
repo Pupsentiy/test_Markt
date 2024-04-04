@@ -1,0 +1,183 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.MainPage {
+  z-index: 20;
+  position: relative;
+  @include align-center;
+  width: 100%;
+  height: 100%;
+
+  .banner {
+    width: 60.6%;
+    @include column;
+    gap: 25px;
+    @include breakpoint-max($xlBreakpoint) {
+      width: 55%;
+    }
+    @include breakpoint-max($xxsBreakpoint) {
+      width: 100%;
+    }
+
+    .title {
+      text-transform: uppercase;
+      max-width: 747px;
+    }
+
+    .subtitle {
+      border-left: 1px solid $color-white;
+      padding-left: 24px;
+      margin-top: 53px;
+      color: $color-white-50;
+      @include breakpoint-max($mdBreakpoint) {
+        margin-top: 35px;
+      }
+      @include breakpoint-max($xxsBreakpoint) {
+        padding-left: 6px;
+        max-width: 60%;
+      }
+    }
+
+    .main_action {
+      display: flex;
+      margin-top: 65px;
+      gap: 42px;
+      //@include breakpoint-max($mdBreakpoint) {
+      //  @include column;
+      //  margin-top: 50px;
+      //  gap: 16px;
+      //}
+      @include breakpoint-max($lgBreakpoint) {
+        @include column;
+        margin-top: 50px;
+        gap: 16px;
+      }
+
+      button {
+        max-width: 380px;
+        height: 71px;
+        width: 100%;
+
+
+        .vector {
+          @include breakpoint-max($xsBreakpoint) {
+            width: 15px;
+            height: 15px;
+          }
+          @include breakpoint-max($xxsBreakpoint) {
+            width: 8px;
+            height: 8px;
+          }
+        }
+
+        @include breakpoint-max($lgBreakpoint) {
+          max-width: 396px;
+        }
+        @include breakpoint-max($smBreakpoint) {
+          max-width: 316px;
+          .button_text {
+            margin: 0 auto;
+          }
+        }
+        @include breakpoint-max($xsBreakpoint) {
+          max-width: 240px;
+          height: 55px;
+        }
+
+        @include breakpoint-max($xxsBreakpoint) {
+          height: 30.28px;
+          max-width: 126px;
+        }
+      }
+
+    }
+
+    .wrapper_info {
+      display: flex;
+      margin-top: 112px;
+      height: 132px;
+      gap: 230px;
+
+      @include breakpoint-max($lgBreakpoint) {
+        //margin-top: 45px;
+        gap: 190px;
+      }
+      @include breakpoint-max($mdBreakpoint) {
+        gap: 130px;
+      }
+      @include breakpoint-max($smBreakpoint) {
+        gap: 85px;
+        height: auto;
+      }
+      @include breakpoint-max($xxsBreakpoint) {
+        gap: 0;
+        width: 192px
+      }
+
+      .wrapper_quantity, .wrapper_percent {
+        width: 190px;
+        border-left: 1px solid $color-white;
+        @include column-between;
+
+        @include breakpoint-max($smBreakpoint) {
+          @include column-justify-center;
+        }
+
+        .description {
+          color: $color-white-50;
+        }
+      }
+
+      .wrapper_quantity {
+        padding: 0 0 0 24px;
+        @include breakpoint-max($xxsBreakpoint) {
+          padding: 0 0 0 8px;
+        }
+      }
+
+      .wrapper_percent {
+        padding: 0 0 0 30px;
+        @include breakpoint-max($xxsBreakpoint) {
+          padding: 0 0 0 8px;
+        }
+      }
+    }
+  }
+
+  .mentor {
+    position: absolute;
+    right: -90px;
+    bottom: 80px;
+    z-index: -1;
+
+    img {
+      width: 525px;
+      height: 800px;
+    }
+
+    @include breakpoint-max($mdBreakpoint) {
+      right: -150px;
+    }
+    @include breakpoint-max($smBreakpoint) {
+      img {
+        width: 100%;
+        height: 740px;
+      }
+    }
+    @include breakpoint-max($xsBreakpoint) {
+      img {
+        width: 100%;
+        height: 612px;
+      }
+    }
+    @include breakpoint-max($xxsBreakpoint) {
+      right: -145px;
+      img {
+        height: 535px
+      }
+    }
+
+
+  }
+
+}

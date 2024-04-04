@@ -1,0 +1,46 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+.Input {
+  input {
+    width: 100%;
+    transition: background-color 0.2s ease-in-out 0s,
+    border-color 0.2s ease-in-out 0s;
+    overflow-wrap: break-word;
+  }
+}
+
+.wrapper {
+  margin-bottom: 8px;
+
+  .input_error {
+    margin-top: 2px;
+    color: #ff0000ff;
+  }
+}
+
+.primary {
+  color: $color-white;
+  font-family: $font-secondary;
+  font-size: 20px;
+  line-height: 24.56px;
+  border-bottom: 1px solid $color-white-50;
+  background: transparent;
+  padding-bottom: 12px;
+
+  ::placeholder {
+    color: $color-white-50;
+  }
+
+  &:focus {
+    &::placeholder {
+      color: $color-white;
+    }
+  }
+
+  &:hover {
+    border-bottom: 1px solid $color-white;
+  }
+}
+
+

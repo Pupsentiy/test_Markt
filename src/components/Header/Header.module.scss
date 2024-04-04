@@ -1,0 +1,92 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.Header {
+  padding-top: 40px;
+  position: relative;
+  z-index: 50;
+  @include between-align-center;
+
+  .logo{
+
+    @include breakpoint-max($xxsBreakpoint) {
+      width: 96px;
+      height: 19px;
+    }
+  }
+
+  .list_links {
+    @include justify-align-center;
+    @include breakpoint-max($mdBreakpoint) {
+      display: none;
+    }
+
+    .wrapper_link {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .link {
+        color: $color-white;
+
+        &:hover {
+          color: $color-blue-150;
+        }
+      }
+    }
+  }
+
+  .tels {
+    color: $color-white;
+    display: flex;
+
+    .menu {
+      display: none;
+      margin-right: 14px;
+      @include breakpoint-max($mdBreakpoint) {
+        display: block;
+        stroke: $color-white;
+        fill: $color-white;
+        &:hover {
+          color: $color-blue-150;
+
+          svg {
+            stroke: $color-blue-150;
+            color: $color-blue-150;
+          }
+        }
+      }
+    }
+
+    .wrapper_number {
+      @include justify-align-center;
+
+      .number {
+        @include breakpoint-max($mdBreakpoint) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        color: $color-blue-150;
+
+        svg {
+          stroke: $color-blue-150;
+          color: $color-blue-150;
+        }
+      }
+
+      svg {
+        margin-right: 9px;
+        stroke: $color-white;
+        @include breakpoint-max($mdBreakpoint) {
+          margin: 0;
+        }
+      }
+    }
+
+  }
+
+}

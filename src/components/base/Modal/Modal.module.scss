@@ -1,0 +1,51 @@
+@import 'src/assets/styles/variables';
+
+.Modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  color: $color-white;
+
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $color-blue-300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    transition: 0.3s background-color;
+  }
+
+  .content {
+    padding: 10px;
+    background: $color-blue-200;
+    transition: 0.4s transform;
+    transform: translateX(-100%);
+    max-width: 60%;
+    position: absolute;
+    z-index: 50;
+  }
+}
+
+
+.opened {
+  pointer-events: auto;
+  opacity: 1;
+
+  .content {
+    //transform: scale(1);
+    max-width: 60%;
+    transform: translateX(0%);
+  }
+}
+
+.isClosing {
+  .content {
+    max-width: 0;
+    transform: translateX(-100%);
+  }
+}

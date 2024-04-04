@@ -1,0 +1,93 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+.CellModal {
+  padding: 40px 40px 40px 75px !important;
+  max-width: 90vw !important;
+  height: 100%;
+  min-height: 100vh;
+  width: 600px;
+  overflow: auto;
+  @include column;
+  gap: 37px;
+  @include breakpoint-max($smBreakpoint) {
+    padding: 24px 24px 24px 34px !important;
+    max-width: 100vw !important;
+  }
+
+
+  .wrapper_close {
+    @include justify-flex-end;
+    stroke: $color-white;
+
+    .close {
+      &:hover {
+        svg {
+          stroke: $color-blue-150;
+        }
+      }
+    }
+  }
+
+
+  .title {
+    margin-left: 15px;
+
+    @include breakpoint-max($smBreakpoint) {
+      margin-left: 0;
+    }
+    @include breakpoint-max($xxsBreakpoint) {
+      width: 80%;
+    }
+  }
+
+  .form {
+    margin-top: 66px;
+    padding-right: 17px;
+    gap: 66px;
+    @include column;
+    @include breakpoint-max($xsBreakpoint) {
+      margin-top: 49px;
+      padding-right: 8px;
+      gap: 49px;
+    }
+
+    .input_num {
+      //margin-top: 65px;
+      @include breakpoint-max($xsBreakpoint) {
+        //margin-top: 44px;
+      }
+    }
+
+    .wrapper_checkbox {
+      gap: 56px;
+      display: flex;
+      @include breakpoint-max($xsBreakpoint) {
+        margin-top: 35px;
+      }
+      @include breakpoint-max($xxsBreakpoint) {
+        margin-top: 0;
+      }
+      .check_label {
+        margin-left: 20px;
+      }
+
+    }
+
+    .submit {
+      margin-top: 23px;
+      height: 71px;
+      max-width: 380px;
+      width: 100%;
+      @include breakpoint-max($xsBreakpoint) {
+        width: 100%;
+        margin-top: 35px;
+      }
+      @include breakpoint-max($xxsBreakpoint) {
+        height: 46.91px;
+        margin-top: 55px;
+      }
+    }
+  }
+
+}

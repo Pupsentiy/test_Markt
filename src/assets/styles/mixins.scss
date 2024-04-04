@@ -1,0 +1,80 @@
+
+@mixin justify-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin justify-flex-end{
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin column-justify-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin column-between{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@mixin column-justify-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin between-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-end-justify-center{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@mixin flex-end-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@mixin breakpoint-min($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-max($bp1, $bp2) {
+  @media (min-width: $bp1) and (max-width: $bp2) {
+    @content;
+  }
+}
+

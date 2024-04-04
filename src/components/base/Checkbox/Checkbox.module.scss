@@ -1,0 +1,48 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+.Check {
+  display: none;
+
+  &:checked + .customCheck {
+    background-image: url('../../../assets/svg/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+    background-color: $color-blue-150;
+    border: 1px solid transparent;
+  }
+}
+
+.customCheck {
+  min-width: 30px;
+  min-height: 30px;
+  border: 1px solid $color-white;
+  transition: background-color .2s;
+  @include breakpoint-max($xsBreakpoint) {
+    min-width: 20px;
+    min-height: 20px;
+  }
+  @include breakpoint-max($xxsBreakpoint) {
+    min-width: 15px;
+    min-height: 15px;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.label {
+  @include align-center;
+  gap: 8px;
+  cursor: pointer;
+  max-width: max-content;
+}
+
+.radio {
+  border-radius: 50%;
+}
+

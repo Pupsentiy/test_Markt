@@ -1,0 +1,164 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.Button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size-m;
+  line-height: $font-line-m;
+  box-sizing: border-box;
+  padding: 0 0 0 21px;
+  @include breakpoint-max($smBreakpoint) {
+    padding: 0 0 0 16px;
+  }
+  @include breakpoint-max($xsBreakpoint) {
+    padding: 0 0 0 8px;
+  }
+}
+
+.addonLeft,
+.addonRight {
+  box-sizing: border-box;
+  display: flex;
+  padding: 0 13px 13px 39px;
+  @include flex-end-justify-center;
+  height: 100%;
+  @include breakpoint-max($xxsBreakpoint) {
+    padding: 0 6px 6px 14px;
+  }
+  @include breakpoint-max($xsBreakpoint) {
+    padding: 0 8px 8px 35px;
+
+  }
+  @include breakpoint-max($xxsBreakpoint) {
+    padding: 0 6px 6px 14px;
+  }
+
+}
+
+
+.disabled {
+  &:disabled {
+    background: var(--background-disabled);
+    color: var(--color-text-disabled);
+    cursor: not-allowed;
+
+    &:hover {
+      background: var(--background-disabled);
+      color: var(--color-text-disabled);
+    }
+  }
+}
+
+.primary {
+  background-color: $color-white;
+  color: $color-blue;
+
+  svg {
+    stroke: $color-blue-100;
+
+    path {
+      stroke: $color-blue-100;
+    }
+  }
+
+  .addonRight {
+    border-left: 2px solid $color-blue-100;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $color-white;
+    //border: 1px solid $color-white;
+    box-shadow: 0 0 0 2px $color-white inset;
+
+    .addonRight {
+      border-left: 2px solid $color-white;
+    }
+
+    svg {
+      stroke: $color-white;
+
+      path {
+        stroke: $color-white;
+      }
+    }
+  }
+
+  &:active {
+    //border: 1px solid $color-grey;
+    box-shadow: 0 0 0 2px $color-grey inset;
+    color: $color-grey;
+
+    svg {
+      stroke: $color-grey;
+      path {
+        stroke: $color-grey;
+      }
+    }
+
+    .addonRight {
+      border-left: 2px solid $color-grey;
+
+    }
+  }
+
+
+}
+
+.transparent {
+  background-color: transparent;
+  color: $color-white;
+  //border: 1px solid $color-white;
+  box-shadow: 0 0 0 2px $color-white inset;
+
+  svg {
+    stroke: $color-white;
+  }
+
+  .addonRight {
+    border-left: 2px solid $color-white;
+  }
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-blue;
+    border: none;
+
+    .addonRight {
+      border-left: 2px solid $color-blue;
+    }
+
+    svg {
+      stroke: $color-blue;
+
+      path {
+        stroke: $color-blue;
+      }
+    }
+  }
+
+  &:active {
+    //border: 1px solid $color-grey;
+    color: $color-blue-150;
+    box-shadow: 0 0 0 2px $color-blue-150 inset;
+
+    svg {
+      stroke: $color-blue-150;
+
+      path {
+        stroke: $color-blue-150;
+      }
+    }
+
+    .addonRight {
+      border-left: 2px solid $color-blue-150;
+    }
+  }
+
+}
+
+
+
